@@ -9,7 +9,6 @@ const Shell: React.FC<ShellProps> = ({ children }) => {
   return (
     <>
     <Header />
-    
       <main className='min-h-screen bg-gray-200'>{children}</main>
     <Footer />
     </>
