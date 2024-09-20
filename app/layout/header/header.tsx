@@ -54,9 +54,6 @@ const Header = () => {
           <Link href="/" onClick={() => setOpened(false)}>
             Home
           </Link>
-          <Link href="/about" onClick={() => setOpened(false)}>
-            About
-          </Link>
           <Link href="/education" onClick={() => setOpened(false)}>
             Education
           </Link>
