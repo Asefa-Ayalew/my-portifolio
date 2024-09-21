@@ -10,7 +10,7 @@ const Skills = () => {
           <motion.img
             src="./images/skilled-person.jpg"
             alt="Developer at work"
-            className="mt-10"
+            className="md:mt-10"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 2 }}

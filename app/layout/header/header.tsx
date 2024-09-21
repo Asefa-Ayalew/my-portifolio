@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <><div className="h-24 flex justify-between items-center px-4 md:px-8 dark:bg-gray-900 bg-white dark:text-white text-gray-900">
       <div className="text-2xl font-sans font-bold">
-        <Link href="/home"> <div className="text-green-800">Asefa Ayalew</div></Link>
+        <Link href="/home"> <div className="text-green-600 font-black">Asefa Ayalew</div></Link>
       </div>
 
       <div className="hidden md:flex text-xl font-sans font-semibold space-x-8">
