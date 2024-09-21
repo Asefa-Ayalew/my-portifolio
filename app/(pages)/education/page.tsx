@@ -63,14 +63,15 @@ const Education = () => {
               <div>2015-2019</div>
             </div>
             <p className="text-2xl  font-semibold mb-4 text-justify">
-              ⚡ I have studied core subjects like Data Structures and Algorithm,
+              ⚡ I have studied core subjects like Data Structures and
+              Algorithm,
               <br />
               DBMS, Networking, Security etc.
               <br />
               ⚡ I have also completed various online courses for Web
-              Development, Mobile App Development, etc. <br />
-              ⚡ I have implemented several projects based on what I&apos;ve learnt under My
-              Information System course.
+              Development, Mobile App Development, etc. <br />⚡ I have
+              implemented several projects based on what I&apos;ve learnt under
+              My Information System course.
             </p>
             <Button
               component="a"
