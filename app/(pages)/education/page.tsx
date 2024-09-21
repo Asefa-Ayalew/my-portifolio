@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "@mantine/core";
+
 const Education = () => {
   return (
     <>
@@ -27,16 +28,16 @@ const Education = () => {
             className="text-gray-900 dark:text-white"
           >
             <h1 className="text-5xl font-bold mb-8 mt-16">Education</h1>
-            <p className="text-2xl  font-semibold mb-4">
+            <p className="text-2xl font-semibold mb-4">
               Basic Qualifications and Certifications I am actively involved in
               hackathons and various tech-related activities that continuously
               enhance my skills and knowledge in the field. My commitment to
               personal and professional development is reflected in my
               certifications, which include [list notable certifications, e.g.,
-              "Certified Web Developer," "AWS Certified Solutions Architect,"
+              &quot;Certified Web Developer,&quot; &quot;AWS Certified Solutions Architect,&quot; 
               etc.]. These experiences have equipped me with a solid foundation
-              in [mention relevant areas, e.g., "software development," "cloud
-              computing," etc.], allowing me to approach challenges with
+              in [mention relevant areas, e.g., &quot;software development,&quot; &quot;cloud
+              computing,&quot; etc.], allowing me to approach challenges with
               creativity and innovation. I am passionate about leveraging my
               expertise to contribute to meaningful projects and collaborate
               with like-minded individuals in the tech community.
@@ -56,22 +57,22 @@ const Education = () => {
             <div className="flex bg-green-800 justify-between h-12 text-white">
               <div>
                 <h1>
-                  Wachemo university school of Electrical and computer
+                  Wachemo University School of Electrical and Computer
                   Engineering
                 </h1>
               </div>
               <div>2015-2019</div>
             </div>
-            <p className="text-2xl  font-semibold mb-4 text-justify">
+            <p className="text-2xl font-semibold mb-4 text-justify">
               ⚡ I have studied core subjects like Data Structures and
               Algorithm,
               <br />
               DBMS, Networking, Security etc.
               <br />
               ⚡ I have also completed various online courses for Web
-              Development, Mobile App Development, etc. <br />⚡ I have
-              implemented several projects based on what I&apos;ve learnt under
-              My Information System course.
+              Development, Mobile App Development, etc.
+              <br />⚡ I have implemented several projects based on what I&apos;ve
+              learnt under My Information System course.
             </p>
             <Button
               component="a"
