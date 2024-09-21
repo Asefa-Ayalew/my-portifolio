@@ -1,31 +1,46 @@
+"use client";
 import React from "react";
-import { Progress } from "@mantine/core";
-import { IconCode, IconDatabase, IconLayoutDashboard } from "@tabler/icons-react";
+import { motion } from "framer-motion";
 
 const Skills = () => {
-  const skills = [
-    { name: "JavaScript", level: 90, icon: <IconCode /> },
-    { name: "React", level: 85, icon: <IconCode /> },
-    { name: "Node.js", level: 80, icon: <IconDatabase /> },
-    { name: "UI/UX Design", level: 75, icon: <IconLayoutDashboard /> },
-  ];
-
   return (
-    <section className="py-20 bg-gray-100">
-      <h2 className="text-4xl font-semibold text-center mb-10">Skills</h2>
-      <div className="max-w-5xl mx-auto space-y-8">
-        {skills.map((skill, index) => (
-          <div key={index} className="flex items-center space-x-4">
-            <div className="text-2xl">{skill.icon}</div>
-            <div className="w-full">
-              <h3 className="text-lg font-semibold">{skill.name}</h3>
-              <Progress value={skill.level} size="lg" className="mt-2" />
-            </div>
-            <span className="text-xl font-semibold">{skill.level}%</span>
-          </div>
-        ))}
-      </div>
-    </section>
+    <>
+      <section className="md:flex md:justify-between w-full min-h-screen dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16 mx-4">
+        <div className="md:w-1/2">
+          <motion.img
+            src="./images/skilled-person.jpg"
+            alt="Developer at work"
+            className="mt-10"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2 }}
+            width={600}
+            height={400}
+          />
+        </div>
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="md:w-1/2 mt-16"
+        >
+          <h1 className="text-5xl">Experience</h1>
+          <h2 className="text-2xl mt-4 text-justify">Work Experience</h2>
+          <p className="mt-3 md:mr-32">
+            With three years of hands-on experience working with both Angular
+            and React frameworks at Perago Information Systems PLC, I have
+            developed a strong foundation in building scalable, high-performance
+            web applications. Throughout my time at Perago, I collaborated with
+            cross-functional teams to deliver innovative solutions, leveraging
+            my expertise in frontend development to solve complex challenges. My
+            experience has honed my ability to create dynamic user interfaces
+            and optimize code for efficiency, ensuring seamless user experiences
+            across platforms.
+          </p>
+        </motion.div>
+      </section>
+      <div></div>
+    </>
   );
 };
 
