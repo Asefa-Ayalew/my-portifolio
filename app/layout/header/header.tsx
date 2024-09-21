@@ -1,4 +1,5 @@
 "use client";
+import DarkModeToggle from "@/app/components/dark-mode-toggle";
 import { Button, Drawer } from "@mantine/core";
 import { IconSun, IconMenu2, IconX } from "@tabler/icons-react";
 import Link from "next/link";
@@ -8,13 +9,11 @@ const Header = () => {
   const [opened, setOpened] = useState(false);
 
   return (
-    <><div className="h-24 flex justify-between items-center px-4 md:px-8 bg-black text-white">
-      {/* Logo Section */}
+    <><div className="h-24 flex justify-between items-center px-4 md:px-8 dark:bg-gray-900 bg-white dark:text-white text-gray-900">
       <div className="text-2xl font-sans font-bold">
         <Link href="/home">&lt; Asefa Ayalew /&gt;</Link>
       </div>
 
-      {/* Links for larger screens */}
       <div className="hidden md:flex text-xl font-sans font-semibold space-x-8">
         <Link href="/">Home</Link>
         <Link href="/about">About</Link>
@@ -22,35 +21,31 @@ const Header = () => {
         <Link href="/skills">Skills</Link>
         <Link href="/projects">Projects</Link>
         <Link href="/contacts">Contacts</Link>
-        <Button className="cursor-pointer">
-          <IconSun />
-        </Button>
+        <DarkModeToggle />
       </div>
 
-      {/* IconMenu2 and IconX for smaller screens */}
       <div className="md:hidden">
-        {/* Toggle between IconMenu2 and IconX based on whether the drawer is opened */}
         {opened ? (
           <IconX
             onClick={() => setOpened(!opened)}
             className="cursor-pointer"
-            size={32} // Adjust the size of the icon
-            strokeWidth={2} // Adjust the thickness of the icon lines
-            color="white" // Ensure the icon is visible on dark background
+            size={32} 
+            strokeWidth={2} 
+            color="white"
           />
         ) : (
           <IconMenu2
             onClick={() => setOpened(!opened)}
             className="cursor-pointer"
-            size={32} // Adjust the size of the icon
-            strokeWidth={2} // Adjust the thickness of the icon lines
-            color="white" // Ensure the icon is visible on dark background
+            size={32} 
+            strokeWidth={2} 
+            color="white"
           />
         )}
       </div>
     </div>
        {opened && (
-        <div className="flex flex-col space-y-4 text-xl bg-black items-center text-white font-sans font-semibold">
+        <div className="flex flex-col space-y-4 text-xl dark:bg-gray-900 bg-white items-center text-white font-sans font-semibold">
           <Link href="/" onClick={() => setOpened(false)}>
             Home
           </Link>
