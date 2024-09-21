@@ -5,7 +5,7 @@ import { IconBrandGithub, IconBrandLinkedin, IconBrandTelegram, IconBrandTwitter
 
 const ContactMe = () => {
   return (
-<div className="flex flex-col w-1/2">
+<div className="flex flex-col md:w-1/2">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
