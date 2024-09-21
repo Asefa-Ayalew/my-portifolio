@@ -12,7 +12,7 @@ import {
 
 const ContactMe = () => {
   return (
-    <>
+    <div className="md:flex justify-between md:pt-8">
       <div className="md:w-1/2">
         <motion.img
           src="./images/contact.jpg"
@@ -28,9 +28,9 @@ const ContactMe = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="md:w-1/2 md:mt-16"
+        className="md:w-1/2"
       >
-        <section className="flex flex-col items-center justify-center h-screen dark:bg-gray-900 bg-white text-center dark:text-white text-gray-900">
+        <section className="flex flex-col items-center  h-screen dark:bg-gray-900 bg-white text-center dark:text-white text-gray-900">
           <h2 className="text-4xl font-bold mb-4">Contact Me</h2>
           <p className="text-lg dark:text-gray-100 text-gray-400 mb-6 md:mx-16 mx-4 text-justify">
             I&apos;m always open to new opportunities and would love to connect with
@@ -110,7 +110,7 @@ const ContactMe = () => {
           </Button>
         </section>
       </motion.div>
-    </>
+    </div>
   );
 };
 
