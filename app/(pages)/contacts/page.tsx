@@ -12,7 +12,7 @@ import {
 
 const ContactMe = () => {
   return (
-    <>
+    <div className="md:flex justify-between">
       <div className="md:w-1/2">
         <motion.img
           src="./images/contact.jpg"
@@ -110,7 +110,7 @@ const ContactMe = () => {
           </Button>
         </section>
       </motion.div>
-    </>
+    </div>
   );
 };
 
