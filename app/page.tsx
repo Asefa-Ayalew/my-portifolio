@@ -7,7 +7,7 @@ import WhatIDo from "./components/what-i-do";
 const Home = () => {
   return (
     <>
-      <section className="md:flex md:justify-between w-full min-h-screen dark:bg-gray-900 bg-white text-white md:mx-16 ">
+      <section className="md:flex md:justify-between w-full min-h-screen dark:bg-gray-900 bg-white text-white md:mx-16">
         <ContactMe />
         <div className="w-1/2">
           {/* Image Animation (Optional) */}

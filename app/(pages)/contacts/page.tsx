@@ -33,10 +33,10 @@ const ContactMe = () => {
         <section className="flex flex-col items-center justify-center h-screen dark:bg-gray-900 bg-white text-center dark:text-white text-gray-900">
           <h2 className="text-4xl font-bold mb-4">Contact Me</h2>
           <p className="text-lg dark:text-gray-100 text-gray-400 mb-6 md:mx-16 mx-4 text-justify">
-            I'm always open to new opportunities and would love to connect with
-            you! Whether it's about my work, potential collaborations, or just a
+            I&apos;m always open to new opportunities and would love to connect with
+            you! Whether it&apos;s about my work, potential collaborations, or just a
             friendly chat, feel free to reach out to me through any of the
-            platforms below. I'll do my best to respond as quickly as possible.
+            platforms below. I&apos;ll do my best to respond as quickly as possible.
           </p>
 
           <div className="flex space-x-4 mb-8">
