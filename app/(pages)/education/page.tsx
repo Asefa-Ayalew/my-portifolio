@@ -69,7 +69,7 @@ const Education = () => {
               <br />
               ⚡ I have also completed various online courses for Web
               Development, Mobile App Development, etc. <br />
-              ⚡ I have implemented several projects based on what I've learnt under My
+              ⚡ I have implemented several projects based on what I&apos;ve learnt under My
               Information System course.
             </p>
             <Button
