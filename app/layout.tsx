@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { MantineProvider } from '@mantine/core';
-import { theme as baseTheme} from './theme';
+import { MantineProvider } from "@mantine/core";
+import { theme as baseTheme } from "./theme";
 import Shell from "./layout/shell/shell";
 
 export const metadata: Metadata = {
@@ -17,7 +17,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-      <MantineProvider theme={baseTheme}><Shell>{children}</Shell></MantineProvider>
+        <MantineProvider theme={baseTheme}>
+          <Shell>
+            <main>{children} </main>
+          </Shell>
+        </MantineProvider>
       </body>
     </html>
   );
