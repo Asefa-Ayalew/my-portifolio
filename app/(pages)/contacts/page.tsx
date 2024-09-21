@@ -4,7 +4,7 @@ import { IconBrandGithub, IconBrandLinkedin, IconBrandTwitter, IconMail, IconBra
 
 const ContactMe = () => {
   return (
-    <section className="flex flex-col items-center justify-center h-screen bg-gray-900 text-center text-white">
+    <section className="flex flex-col items-center justify-center h-screen dark:bg-gray-900 bg-white text-center text-white">
       <h2 className="text-4xl font-bold mb-4">Contact Me</h2>
       <p className="text-lg text-gray-400 mb-6">
         You can contact me at the places mentioned below. I will try to get back to you as fast as I can.
