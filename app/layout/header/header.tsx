@@ -1,7 +1,6 @@
 "use client";
 import DarkModeToggle from "@/app/components/dark-mode-toggle";
-import { Button, Drawer } from "@mantine/core";
-import { IconSun, IconMenu2, IconX } from "@tabler/icons-react";
+import { IconMenu2, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import React, { useState } from "react";
 
@@ -16,7 +15,6 @@ const Header = () => {
 
       <div className="hidden md:flex text-xl font-sans font-semibold space-x-8">
         <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
         <Link href="/education">Education</Link>
         <Link href="/skills">Skills</Link>
         <Link href="/projects">Projects</Link>
@@ -61,6 +59,7 @@ const Header = () => {
           <Link href="/contacts" onClick={() => setOpened(false)}>
             Contacts
           </Link>
+          <DarkModeToggle />
         </div>
       )}
       </>

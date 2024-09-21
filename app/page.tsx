@@ -1,24 +1,28 @@
+"use client";
 import React from "react";
-import { Button } from "@mantine/core";
-import { IconArrowRight } from "@tabler/icons-react";
-import Link from "next/link";
+import { motion } from "framer-motion";
+import ContactMe from "./components/contact-me";
+import WhatIDo from "./components/what-i-do";
 
 const Home = () => {
   return (
-    <section className="flex flex-col justify-center items-center h-screen dark:bg-gray-900 bg-white">
-      <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-6">
-      Hi, I&#39;m Asefa Ayalew
-      </h1>
-      <p className="text-xl text-gray-900 dark:text-whitemb-8">
-        A Full-Stack Developer with a passion for creating impactful web
-        applications.
-      </p>
-      <Link href="/projects">
-        <Button className="text-lg" size="lg" variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}>
-          See My Work <IconArrowRight className="ml-2" />
-        </Button>
-      </Link>
-    </section>
+    <>
+      <section className="md:flex md:justify-between w-full min-h-screen dark:bg-gray-900 bg-white text-white md:mx-16 ">
+        <ContactMe />
+        <div className="w-1/2">
+          {/* Image Animation (Optional) */}
+          <motion.img
+            src="./images/profile1.jpg" // Replace with your image
+            alt="Developer at work"
+            className="mt-10"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2 }}
+          />
+        </div>
+      </section>
+      <WhatIDo />
+    </>
   );
 };
 
