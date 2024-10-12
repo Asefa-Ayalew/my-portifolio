@@ -1,94 +1,77 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@mantine/core";
+import { Text, Title } from "@mantine/core";
+import EducationIcon from "@/app/components/edu";
+import EducationTimeline from "@/app/components/edu-timeline";
 
 const Education = () => {
   return (
-    <>
-      <div className="md:flex md:mx-16 mx-4">
-        <div className="md:w-1/2">
-          {/* Image Animation (Optional) */}
-          <motion.img
-            src="./images/profile3.jpg"
-            width={400}
-            height={400}
-            alt="Developer at work"
-            className="md:mt-10"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 2 }}
-          />
+    <section className="min-h-screen flex flex-col items-center py-16 text-justify">
+      <Title
+        order={2}
+        className="text-4xl font-bold mb-10 text-gray-900 ml-32 dark:text-white"
+      >
+        Education
+      </Title>
+
+      <div className="flex flex-col md:flex-row md:mx-16 mx-4">
+        <div className="md:w-1/2 flex justify-center mb-8 md:mb-0 w-800 h-800">
+          <EducationIcon />
         </div>
-        <div className="md:w-1/2 text-justify">
+
+        <div className="md:w-1/2 spa">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
             className="text-gray-900 dark:text-white"
           >
-            <h1 className="text-5xl font-bold mb-8 mt-16">Education</h1>
-            <p className="text-2xl font-semibold mb-4">
-              Basic Qualifications and Certifications I am actively involved in
-              hackathons and various tech-related activities that continuously
-              enhance my skills and knowledge in the field. My commitment to
-              personal and professional development is reflected in my
-              certifications, which include [list notable certifications, e.g.,
-              &quot;Certified Web Developer,&quot; &quot;AWS Certified Solutions Architect,&quot; 
-              etc.]. These experiences have equipped me with a solid foundation
-              in [mention relevant areas, e.g., &quot;software development,&quot; &quot;cloud
-              computing,&quot; etc.], allowing me to approach challenges with
-              creativity and innovation. I am passionate about leveraging my
-              expertise to contribute to meaningful projects and collaborate
-              with like-minded individuals in the tech community.
-            </p>
+            <Text variant="link" component="span" inherit>
+              I am passionate about technology and software engineering, with a
+              strong commitment to continuously enhancing my skills. Throughout
+              my academic journey, I have actively engaged in projects,
+              internships, and coding challenges that have helped me grow as a
+              developer.
+            </Text>
+            <Text className="mb-4">
+              Here are some key skills and areas of expertise I have developed:
+            </Text>
+            <ul className="list-disc list-inside mb-4">
+              <li>
+                <span className="dark:text-white text-gray-900 dark:bg-gray-900 bg-white">
+                  Full-stack software development (React, Angular, Node.js)
+                </span>
+              </li>
+              <li>
+                <span className="dark:text-white text-gray-900 dark:bg-gray-900 bg-white">
+                  Data structures and algorithms
+                </span>
+              </li>
+              <li>
+                <span className="dark:text-white text-gray-900 dark:bg-gray-900 bg-white">
+                  Database management and optimization (SQL, MongoDB)
+                </span>
+              </li>
+              <li>
+                <span className="dark:text-white text-gray-900 dark:bg-gray-900 bg-white">
+                  Version control systems (Git, GitHub)
+                </span>
+              </li>
+              <li>
+                <span className="dark:text-white text-gray-900 dark:bg-gray-900 bg-white">
+                  Agile methodologies and software development lifecycle (SDLC)
+                </span>
+              </li>
+            </ul>
+            <div className="mt-8">
+            <EducationTimeline />
+            </div>
           </motion.div>
+          
         </div>
       </div>
-      <div className="text-justify mx-4 md:mx-16 mt-32">
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="text-gray-900 dark:text-white"
-        >
-          <h1 className="text-5xl font-bold mb-4">Degrees Received</h1>
-          <div className="border border-gray-400 shadow-2xl">
-            <div className="flex bg-green-800 justify-between h-12 text-white">
-              <div>
-                <h1>
-                  Wachemo University School of Electrical and Computer
-                  Engineering
-                </h1>
-              </div>
-              <div>2015-2019</div>
-            </div>
-            <p className="text-2xl font-semibold mb-4 text-justify">
-              ⚡ I have studied core subjects like Data Structures and
-              Algorithm,
-              <br />
-              DBMS, Networking, Security etc.
-              <br />
-              ⚡ I have also completed various online courses for Web
-              Development, Mobile App Development, etc.
-              <br />⚡ I have implemented several projects based on what I&apos;ve
-              learnt under My Information System course.
-            </p>
-            <Button
-              component="a"
-              href="https://www.wcu.edu.et"
-              target="_blank"
-              color="dark"
-              radius="xl"
-              size="lg"
-              className="text-gray-900 dark:text-white"
-            >
-              Visit website
-            </Button>
-          </div>
-        </motion.div>
-      </div>
-    </>
+    </section>
   );
 };
 

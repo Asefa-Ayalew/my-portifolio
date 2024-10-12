@@ -11,15 +11,15 @@ import {
 
 const ContactMe = () => {
   return (
-    <div className="flex flex-col md:w-1/2">
+    <div className="flex flex-col md:w-1/2 mx-6 md:mx-0">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         className="text-center"
       >
-        <h1 className="text-5xl font-bold mb-2 text-justify mt-4">Hello.</h1>
-        <p className="text-2xl text-gray-900 dark:text-white font-semibold mb-4 text-justify">
+        <h1 className="text-3xl font-bold mb-2 text-justify mt-4">Hello.</h1>
+        <p className="text-gray-900 dark:text-white font-semibold mb-4 text-justify">
           I&apos;m Asefa Ayalew. <br />
           ReactJS | NextJS, Angular, Nodejs, flutter, asp.net
         </p>
@@ -37,8 +37,8 @@ const ContactMe = () => {
           href="https://github.com/Asefa-Ayalew/"
           target="_blank"
           color="dark"
-          radius="xl"
-          size="lg"
+          radius="lg"
+          size="sm"
           className="text-gray-900 dark:text-white"
         >
           <IconBrandGithub size={24} />
@@ -48,8 +48,8 @@ const ContactMe = () => {
           href="https://linkedin.com"
           target="_blank"
           color="blue"
-          radius="xl"
-          size="lg"
+          radius="lg"
+          size="sm"
           className="text-gray-900 dark:text-white"
         >
           <IconBrandLinkedin size={24} />
@@ -100,7 +100,7 @@ const ContactMe = () => {
           size="lg"
           radius="lg"
           component="a"
-          href="/contact"
+          href="/contacts"
         >
           Contact Me
         </Button>

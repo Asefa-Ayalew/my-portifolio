@@ -1,8 +1,13 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+// import CustomCard from "@/app/shared/ui/card/card";
 
 const Skills = () => {
+  const onCardClicked = () =>{
+    console.log('card clicked');
+    
+  }
   return (
     <>
       <section className="md:flex md:justify-between w-full min-h-screen dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16 mx-4">
@@ -24,7 +29,7 @@ const Skills = () => {
           transition={{ duration: 1 }}
           className="md:w-1/2 mt-16"
         >
-          <h1 className="text-5xl">Projects</h1>
+          <h1 className="text-3xl">Projects</h1>
           <p className="mt-3 md:mr-32">
             My projects leverage a wide range of cutting-edge technologies, with
             a strong focus on web-based applications. I specialize in creating
@@ -35,7 +40,14 @@ const Skills = () => {
           </p>
         </motion.div>
       </section>
-      <div></div>
+      <div>
+        {/* <CustomCard 
+        buttonText="fk"
+        description="card description"
+        onClick={onCardClicked}
+        title="card title"
+        /> */}
+      </div>
     </>
   );
 };
