@@ -14,7 +14,9 @@ const Home = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <Text className="text-2xl font-bold my-6">Hi, I'm Asefa Ayalew</Text>
+          <Text className="text-2xl font-bold my-6">
+            Hi, I&apos;m Asefa Ayalew
+          </Text>
           <TypingEffect
             strings={[
               "Fronted Developer",
@@ -36,9 +38,9 @@ const Home = () => {
             intuitive user interfaces that not only engage users but also
             elevate brands. My goal is to transform complex ideas into seamless,
             user-friendly applications that foster interaction and drive
-            business success. Let's work together to turn your vision into a
+            business success. Let&apos;s work together to turn your vision into a
             reality!
-          </Text> 
+          </Text>
 
           <div className="space-x-4">
             <Button className="bg-green-text-green-600 hover:bg-green-600">
@@ -48,7 +50,7 @@ const Home = () => {
               variant="outline"
               className="border-green-text-green-600 text-green-600 hover:bg-green-text-green-600 hover:text-white"
             >
-              Let's Talk
+              Let&apos;s Talk
             </Button>
           </div>
         </motion.div>
