@@ -31,7 +31,7 @@ const Home = () => {
             backSpeed={30}
             loop={true}
           />
-          <Text className="max-w-xl mt-4 mb-8">
+          <Text className="max-w-xl mt-4 mb-8 text-justify">
             I am a passionate Frontend Developer dedicated to creating
             exceptional digital experiences. With expertise in technologies like
             React, Angular, and Next.js, I strive to build responsive and

@@ -10,7 +10,7 @@ const Education = () => {
     <section className="min-h-screen flex flex-col items-center py-16 text-justify">
       <Title
         order={2}
-        className="text-4xl font-bold mb-10 text-gray-900 ml-32 dark:text-white"
+        className="text-3xl font-bold mb-10 text-gray-900 ml-32 dark:text-white"
       >
         Education
       </Title>

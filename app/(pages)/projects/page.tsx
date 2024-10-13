@@ -30,7 +30,7 @@ const Skills = () => {
           className="md:w-1/2 mt-16"
         >
           <h1 className="text-3xl">Projects</h1>
-          <p className="mt-3 md:mr-32">
+          <p className="mt-3 md:mr-32 text-justify">
             My projects leverage a wide range of cutting-edge technologies, with
             a strong focus on web-based applications. I specialize in creating
             dynamic, high-performance solutions that prioritize both

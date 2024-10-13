@@ -18,7 +18,7 @@ const EducationTimeline = () => {
       </Text>
     </Timeline.Item>
 
-    <Timeline.Item bullet={<IconSchool size={24} />} title="Primary School" color='var(--mantine-color-primary-7)' className='dark:text-white'>
+    <Timeline.Item bullet={<IconSchool size={24} />} title="Preparatory School" color='var(--mantine-color-primary-7)' className='dark:text-white'>
       <Text c="dimmed" size="md">
         2011-2015
         <Text variant="link" component="span" inherit>
