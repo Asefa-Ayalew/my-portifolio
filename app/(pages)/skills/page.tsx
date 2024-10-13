@@ -45,7 +45,7 @@ const skillsData = [
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20 dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16">
+    <section id="skills" className="py-12 dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16">
       <Box className="max-w-full px-4">
         <Box className="text-center md:text-left mb-10">
           <Title className="text-3xl font-bold text-green-600 mb-2">Skills</Title>

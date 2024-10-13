@@ -7,20 +7,20 @@ import EducationTimeline from "@/app/components/edu-timeline";
 
 const Education = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center py-16 text-justify">
+    <section className="flex flex-col items-center text-justify">
       <Title
         order={2}
-        className="text-3xl font-bold mb-10 text-green-600 md:ml-32 items-center"
+        className="text-2xl font-bold text-green-600 md:ml-32 mb-4 items-center"
       >
         Education
       </Title>
 
       <Box className="flex flex-col md:flex-row md:mx-16 mx-4">
-        <Box className="md:w-1/2 flex justify-center mb-8 md:mb-0 w-800 h-800">
+        <Box className="md:w-1/2 flex justify-center mb-8 md:mb-0">
           <EducationIcon />
         </Box>
 
-        <Box className="md:w-1/2 spa">
+        <Box className="md:w-1/2">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}

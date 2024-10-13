@@ -7,7 +7,7 @@ import MySocialMedias from "./components/contact-me/my-social-medias";
 
 const Home = () => {
   return (
-    <section className="md:flex md:justify-between w-full min-h-screen dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16">
+    <section className="md:flex md:justify-between  dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16 overflow-x-hidden">
       <Container className="md:w-1/2">
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -61,7 +61,7 @@ const Home = () => {
         <motion.img
           src="./images/profile1.jpg" // Replace with your image
           alt="Developer at work"
-          className="mt-10"
+          className="mt-10 w-full"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 2 }}

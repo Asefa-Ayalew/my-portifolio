@@ -28,7 +28,7 @@ const ProjectsList = ({ projects, title, icon }: ProjectsListProps) => {
       initial={{ opacity: 0, x: -100 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.8 }}
-      className="flex flex-col h-full"
+      className="flex flex-col"
     >
       <Group className="mb-6 flex flex-start">
         <ThemeIcon size={48} radius="xl" color="green-600">

@@ -29,15 +29,15 @@ const ProjectCard = ({ item }: ProjectCardProps) => {
 
   return (
     <Card
-      shadow="md"
+      shadow="xs"
       p="lg"
       radius={"xl"}
-      className={`mb-4 dark:bg-gradient-to-r from-gray-800 to-gray-700 bg-white transition-transform duration-300 ease-in-out dark:hover:bg-gray-600 hover:bg-transparent hover:scale-105 flex-1`}      
+      className={`mb-4 dark:bg-gradient-to-r from-gray-800 to-gray-700 bg-gray-50 transition-transform duration-300 ease-in-out dark:hover:bg-gray-600 hover:scale-105 flex-1`}      
     >
       <Title order={4} className="text-lg font-semibold text-text-gray-900 dark:text-white text-left">
         {item.title}
       </Title>
-      <Box className="flex flex-col h-full">
+      <Box className="flex flex-col">
         <Text size="sm" className="text-gray-400 flex-1 overflow-hidden" style={{ maxHeight: showMore ? "none" : "3.2em", transition: "max-height 0.3s ease" }}>
           {showMore ? item.description : `${item.description.substring(0, 150)}...`}
         </Text>
