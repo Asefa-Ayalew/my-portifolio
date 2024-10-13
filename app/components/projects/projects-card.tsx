@@ -30,9 +30,9 @@ const ProjectCard = ({ item }: ProjectCardProps) => {
     <Card
       shadow="md"
       p="lg"
-      className={`mb-4 bg-gradient-to-r from-gray-800 to-gray-700 transition-transform duration-300 ease-in-out hover:bg-gray-600 hover:scale-105 flex-1`}      
+      className={`mb-4 dark:bg-gradient-to-r from-gray-800 to-gray-700 bg-white transition-transform duration-300 ease-in-out dark:hover:bg-gray-600 hover:bg-transparent hover:scale-105 flex-1`}      
     >
-      <Title order={4} className="text-lg font-semibold text-white text-left">
+      <Title order={4} className="text-lg font-semibold text-text-gray-900 dark:text-white text-left">
         {item.title}
       </Title>
       <div className="flex flex-col h-full">
