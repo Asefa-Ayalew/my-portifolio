@@ -19,7 +19,7 @@ interface Project {
 interface ProjectsListProps {
   projects: Project[];
   title: string;
-  icon: string; // Pass the icon name
+  icon: string; 
 }
 
 const ProjectsList = ({ projects, title, icon }: ProjectsListProps) => {
