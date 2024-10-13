@@ -35,7 +35,7 @@ const ProjectsList = ({ projects, title, icon }: ProjectsListProps) => {
           {/* Use the icon based on the name passed */}
           {icon === "code" ? <IconCode size={32} /> : <IconRocket size={32} />}
         </ThemeIcon>
-        <Title order={3} className="text-2xl text-green-300">
+        <Title order={3} className="text-2xl text-green-600">
           {title}
         </Title>
       </Group>

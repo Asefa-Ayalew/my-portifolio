@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Button, Container, Text } from "@mantine/core";
+import { Box, Button, Container, Text } from "@mantine/core";
 import TypingEffect from "./shared/ui/typeing-effect";
 import MySocialMedias from "./components/contact-me/my-social-medias";
 
@@ -42,7 +42,7 @@ const Home = () => {
             reality!
           </Text>
 
-          <div className="space-x-4">
+          <Box className="space-x-4">
             <Button className="bg-green-text-green-600 hover:bg-green-600">
               Hire Me
             </Button>
@@ -52,7 +52,7 @@ const Home = () => {
             >
               Let&apos;s Talk
             </Button>
-          </div>
+          </Box>
         </motion.div>
         <MySocialMedias />
       </Container>

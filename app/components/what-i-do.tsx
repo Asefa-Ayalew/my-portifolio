@@ -1,13 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Box } from "@mantine/core";
 const WhatIDo = () => {
   return (
     <>
       <h1 className="text-3xl dark:text-white text-gray-900 text-center md:ml-56 mb-8 font-black">
         Here is what I do
       </h1>
-      <div className="md:flex md:mx-16 mx-4">
-        <div className="md:w-1/2">
+      <Box className="md:flex md:mx-16 mx-4">
+        <Box className="md:w-1/2">
           {/* Image Animation (Optional) */}
           <motion.img
             src="./images/profile2.jpg" // Replace with your image
@@ -16,8 +17,8 @@ const WhatIDo = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 2 }}
           />
-        </div>
-        <div className="md:w-1/2">
+        </Box>
+        <Box className="md:w-1/2">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,8 +57,8 @@ const WhatIDo = () => {
               </li>
             </ul>
           </motion.div>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </>
   );
 };

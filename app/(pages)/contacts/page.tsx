@@ -2,10 +2,11 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ContactMeSection } from "@/app/components/contact-me/contact-me";
+import { Box } from "@mantine/core";
 
 const ContactMe = () => {
   return (
-    <div className="md:flex justify-between md:pt-8">
+    <Box className="md:flex justify-between md:pt-8">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -14,7 +15,7 @@ const ContactMe = () => {
       >
         <ContactMeSection />
       </motion.div>
-    </div>
+    </Box>
   );
 };
 

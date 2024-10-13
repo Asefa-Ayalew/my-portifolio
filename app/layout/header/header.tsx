@@ -1,6 +1,6 @@
 "use client";
 import DarkModeToggle from "@/app/components/dark-mode-toggle";
-import { Button } from "@mantine/core";
+import { Box, Button } from "@mantine/core";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -14,15 +14,15 @@ const Header = () => {
   const isActive = (path: string) => (pathname === path ? 'text-green-600' : 'text-gray-900 dark:text-white');
 
   return (
-    <div className="fixed w-full top-0 z-50">
-      <div className="h-24 flex justify-between items-center px-4 md:px-8 dark:bg-gray-900 bg-white">
-        <div className="text-2xl font-sans font-bold">
+    <Box className="fixed w-full top-0 z-50">
+      <Box className="h-24 flex justify-between items-center px-4 md:px-8 dark:bg-gray-900 bg-white">
+        <Box className="text-2xl font-sans font-bold">
           <Link href="/home">
-            <div className="text-green-600 font-black md:ml-12">Asefa Ayalew</div>
+            <Box className="text-green-600 font-black md:ml-12">Asefa Ayalew</Box>
           </Link>
-        </div>
+        </Box>
 
-        <div className="hidden md:flex text-xl font-sans font-semibold space-x-8">
+        <Box className="hidden md:flex text-xl font-sans font-semibold space-x-8">
           <Link href="/" className={`relative ${isActive('/')}`}>
             <span className="absolute inset-0 transition-all duration-300 transform opacity-0 hover:opacity-100 hover:text-green-600 rounded-lg"></span>
             <span className="relative z-10 hover:text-green-600">Home</span>
@@ -44,9 +44,9 @@ const Header = () => {
             <span className="relative z-10 hover:text-green-600">Contacts</span>
           </Link>
           <DarkModeToggle />
-        </div>
+        </Box>
 
-        <div className="md:hidden">
+        <Box className="md:hidden">
           {opened ? (
             <IconX
               onClick={() => setOpened(!opened)}
@@ -62,11 +62,11 @@ const Header = () => {
               strokeWidth={2}
             />
           )}
-        </div>
-      </div>
+        </Box>
+      </Box>
 
       {opened && (
-        <div className="flex flex-col space-y-4 text-xl dark:bg-gray-900 bg-white items-center text-gray-900 dark:text-white font-sans font-semibold">
+        <Box className="flex flex-col space-y-4 text-xl dark:bg-gray-900 bg-white items-center text-gray-900 dark:text-white font-sans font-semibold">
           <Link href="/" onClick={() => setOpened(false)} className={`relative ${isActive('/')}`}>
             <span className="absolute inset-0 transition-all duration-300 transform opacity-0 hover:opacity-100 hover:text-green-600 rounded-lg"></span>
             <span className="relative z-10 hover:text-green-600">Home</span>
@@ -90,9 +90,9 @@ const Header = () => {
           <Button onClick={() => setOpened(false)}>
             <DarkModeToggle />
           </Button>
-        </div>
+        </Box>
       )}
-    </div>
+    </Box>
   );
 };
 

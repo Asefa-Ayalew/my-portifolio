@@ -1,86 +1,94 @@
 "use client";
-import React from "react";
+import { Card, Text, Title, Progress, Group, ThemeIcon, Box } from "@mantine/core";
+import { IconCode, IconDeviceDesktop, IconTools, IconUsers } from "@tabler/icons-react";
 import { motion } from "framer-motion";
-import { Badge, Progress, Rating } from "@mantine/core";
-import {
-  IconBrandNextjs,
-  IconBrandReact,
-  IconBrandNodejs,
-  IconCode,
-  IconBrandAngular,
-  IconBrandAdobe,
-} from "@tabler/icons-react";
 
-const Skills = () => {
-  const skills = [
-    { name: "React", icon: IconBrandReact, rating: 4.5, progress: 85 },
-    { name: "Next.js", icon: IconBrandNextjs, rating: 4.85, progress: 95 },
-    { name: "Angular", icon: IconBrandAngular, rating: 4.7, progress: 94 },
-    { name: "Node.js", icon: IconBrandNodejs, rating: 3.5, progress: 70 },
-    { name: "Nest.js", icon: IconBrandAdobe, rating: 4, progress: 80 },
-    { name: "ASP.NET", icon: IconCode, rating: 2.5, progress: 50 },
-  ];
+// Skill data
+const skillsData = [
+  {
+    category: "Programming Languages",
+    skills: [
+      { name: "JavaScript", proficiency: 90 },
+      { name: "TypeScript", proficiency: 85 },
+      { name: "Python", proficiency: 42 },
+    ],
+    icon: <IconCode size={32} />,
+  },
+  {
+    category: "Frameworks & Libraries",
+    skills: [
+      { name: "React", proficiency: 95 },
+      { name: "Next.js", proficiency: 90 },
+      { name: "Angular", proficiency: 80 },
+    ],
+    icon: <IconDeviceDesktop size={32} />,
+  },
+  {
+    category: "Tools & Platforms",
+    skills: [
+      { name: "Git", proficiency: 85 },
+      { name: "Webpack", proficiency: 70 },
+      { name: "Vercel", proficiency: 80 },
+    ],
+    icon: <IconTools size={32} />,
+  },
+  {
+    category: "Soft Skills",
+    skills: [
+      { name: "Communication", proficiency: 95 },
+      { name: "Teamwork", proficiency: 90 },
+      { name: "Problem-solving", proficiency: 85 },
+    ],
+    icon: <IconUsers size={32} />,
+  },
+];
+
+const SkillsSection = () => {
   return (
-    <section
-      className="md:flex md:justify-between w-full min-h-screen dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16 mx-4 w-
-    "
-    >
-      <div className="md:w-1/2">
-        <motion.img
-          src="./images/skilled-person.jpg"
-          alt="Developer at work"
-          className="md:mt-10"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2 }}
-          width={600}
-          height={400}
-        />
-      </div>
-      <motion.div
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="md:w-1/2 mt-16 mr-24"
-      >
-        <h1 className="text-4xl font-extrabold mb-10 text-transparent bg-clip-text bg-gradient-to-r from-green-500 via-blue-500 to-red-500">
-          My Skills
-        </h1>
-        <p className="text-lg mb-6">
-          I am a passionate software engineer with experience in building modern
-          web applications. Here are some of the technologies I have mastered:
-        </p>
+    <section id="skills" className="py-20 dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16">
+      <Box className="max-w-full px-4">
+        <Box className="text-center md:text-left mb-10">
+          <Title className="text-3xl font-bold text-green-600 mb-2">Skills</Title>
+          <Text className="text-lg text-gray-400">
+            A showcase of my technical expertise and professional skills.
+          </Text>
+        </Box>
 
-        {/* Skills grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skills.map((skill) => (
-            <div
-              key={skill.name}
-              className="p-4 rounded-lg shadow-lg bg-gradient-to-r from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900"
+        <Box className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {skillsData.map((category, index) => (
+            <motion.div
+              key={index}
+              className="flex flex-col"
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <div className="flex items-center space-x-4 mb-2">
-                <skill.icon size={32} className="text-blue-600" />
-                <h3 className="text-xl font-semibold">{skill.name}</h3>
-              </div>{" "}
-              <div className="mb-2">
-                <Rating value={skill.rating} fractions={2} readOnly />
-              </div>
-              <Progress
-                value={skill.progress}
-                color="blue"
-                className="mb-2"
-                radius="lg"
-                size="lg"
-              />
-              <Badge color="teal" size="lg">
-                Proficiency: {skill.progress}%
-              </Badge>
-            </div>
+              <Group className="mb-4 justify-center">
+                <ThemeIcon size={48} radius="xl" color="green-600">
+                  {category.icon}
+                </ThemeIcon>
+                <Title order={3} className="text-xl text-green-300">
+                  {category.category}
+                </Title>
+              </Group>
+
+              {category.skills.map((skill, idx) => (
+                <Card
+                  key={idx}
+                  shadow="md"
+                  p="lg"
+                  className="dark:bg-gradient-to-r from-gray-800 to-gray-700 bg-white dark:hover:bg-gray-600 transition-transform transform hover:scale-105 hover:shadow-xl mb-4"
+                >
+                  <Text className="dark:text-white text-gray-900 font-semibold">{skill.name}</Text>
+                  <Progress value={skill.proficiency} color="green" size="lg" className="mt-2" />
+                </Card>
+              ))}
+            </motion.div>
           ))}
-        </div>
-      </motion.div>
+        </Box>
+      </Box>
     </section>
   );
 };
 
-export default Skills;
+export default SkillsSection;
