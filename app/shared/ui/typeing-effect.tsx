@@ -35,7 +35,7 @@ const TypingEffect: React.FC<TypingEffectProps> = ({
   }, [strings, typeSpeed, backSpeed, loop]);
 
   return (
-    <Text variant="link" component="span" inherit className="text-green-600">
+    <Text variant="link" component="span" inherit className="text-green-600 text-xl">
       <span ref={el} />
     </Text>
   );

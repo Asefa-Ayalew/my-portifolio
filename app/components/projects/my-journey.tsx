@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Card, Text, Title, Group, Divider, ThemeIcon } from "@mantine/core";
+import { Card, Text, Title, Group, Divider, ThemeIcon, Box } from "@mantine/core";
 import { IconBook, IconBriefcase } from "@tabler/icons-react";
 
 const journeyData = {
@@ -41,8 +41,8 @@ const journeyData = {
 const MyJourney = () => {
   return (
     <section id="my-journey" className="py-20 bg-gray-900 text-white md:mx-16">
-      <div className="max-w-full px-4">
-        <div className="text-center md:text-left mb-10">
+      <Box className="max-w-full px-4">
+        <Box className="text-center md:text-left mb-10">
           <Title className="text-3xl font-bold text-green-600 mb-2">
             My Journey
           </Title>
@@ -50,9 +50,9 @@ const MyJourney = () => {
             A glimpse of my education and work experiences that shaped my career
             path.
           </Text>
-        </div>
+        </Box>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Box className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Education Section */}
           <motion.div
             initial={{ opacity: 0, x: -100 }}
@@ -124,8 +124,8 @@ const MyJourney = () => {
               </Card>
             ))}
           </motion.div>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </section>
   );
 };

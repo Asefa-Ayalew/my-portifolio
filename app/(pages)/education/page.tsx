@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { Text, Title } from "@mantine/core";
+import { Box, Text, Title } from "@mantine/core";
 import EducationIcon from "@/app/components/edu";
 import EducationTimeline from "@/app/components/edu-timeline";
 
@@ -10,17 +10,17 @@ const Education = () => {
     <section className="min-h-screen flex flex-col items-center py-16 text-justify">
       <Title
         order={2}
-        className="text-3xl font-bold mb-10 text-gray-900 ml-32 dark:text-white"
+        className="text-3xl font-bold mb-10 text-green-600 md:ml-32 items-center"
       >
         Education
       </Title>
 
-      <div className="flex flex-col md:flex-row md:mx-16 mx-4">
-        <div className="md:w-1/2 flex justify-center mb-8 md:mb-0 w-800 h-800">
+      <Box className="flex flex-col md:flex-row md:mx-16 mx-4">
+        <Box className="md:w-1/2 flex justify-center mb-8 md:mb-0 w-800 h-800">
           <EducationIcon />
-        </div>
+        </Box>
 
-        <div className="md:w-1/2 spa">
+        <Box className="md:w-1/2 spa">
           <motion.div
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -64,13 +64,13 @@ const Education = () => {
                 </span>
               </li>
             </ul>
-            <div className="mt-8">
+            <Box className="mt-8">
             <EducationTimeline />
-            </div>
+            </Box>
           </motion.div>
           
-        </div>
-      </div>
+        </Box>
+      </Box>
     </section>
   );
 };

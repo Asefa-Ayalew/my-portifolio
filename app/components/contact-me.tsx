@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@mantine/core";
+import { Box, Button } from "@mantine/core";
 import {
   IconBrandGithub,
   IconBrandLinkedin,
@@ -11,7 +11,7 @@ import {
 
 const ContactMe = () => {
   return (
-    <div className="flex flex-col md:w-1/2 mx-6 md:mx-0">
+    <Box className="flex flex-col md:w-1/2 mx-6 md:mx-0">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ const ContactMe = () => {
           Contact Me
         </Button>
       </motion.div>
-    </div>
+    </Box>
   );
 };
 

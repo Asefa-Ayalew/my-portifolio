@@ -7,6 +7,7 @@ import {
   Button,
   Group,
   ActionIcon,
+  Box,
 } from "@mantine/core";
 import {
   IconBrandTwitter,
@@ -34,10 +35,10 @@ export function ContactMeSection() {
   ));
 
   return (
-    <div className="w-full md:mx-16 mx-4 bg-white dark:bg-gray-900 py-12 px-6">
-      <div>
+    <Box className="w-full md:mx-16 mx-4 bg-white dark:bg-gray-900 py-12 px-6">
+      <Box>
         <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
-          <div>
+          <Box>
             <Title className="text-gray-900 dark:text-white">Contact Us</Title>
             <Text className="text-gray-900 dark:text-white mt-4 mb-8">
               Leave your email and we will get back to you within 24 hours.
@@ -46,8 +47,8 @@ export function ContactMeSection() {
             <ContactIconsList />
 
             <Group mt="xl">{icons}</Group>
-          </div>
-          <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
+          </Box>
+          <Box className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
             <TextInput
               label="Email"
               placeholder="asefa12a19@gmail.com.com"
@@ -74,9 +75,9 @@ export function ContactMeSection() {
                 Send message
               </Button>
             </Group>
-          </div>
+          </Box>
         </SimpleGrid>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }

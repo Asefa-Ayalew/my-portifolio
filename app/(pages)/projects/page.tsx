@@ -1,7 +1,7 @@
 // src/components/MyProjects.tsx
 "use client";
 import { motion } from "framer-motion";
-import { Title, Text } from "@mantine/core";
+import { Title, Text, Box } from "@mantine/core";
 import ProjectsList from "@/app/components/projects/projects-list";
 
 const projectsData = {
@@ -42,8 +42,8 @@ const projectsData = {
 const MyProjects = () => {
   return (
     <section id="my-projects" className="py-10 dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16">
-      <div className="max-w-full px-4">
-        <div className="text-center md:text-left mb-10">
+      <Box className="max-w-full px-4">
+        <Box className="text-center md:text-left mb-10">
           <Title className="text-3xl font-bold text-green-600 mb-2">
             My Projects
           </Title>
@@ -51,9 +51,9 @@ const MyProjects = () => {
             A selection of personal and collaborative projects that highlight my
             skills and contributions.
           </Text>
-        </div>
+        </Box>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <Box className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Personal Projects Section */}
           <ProjectsList 
             projects={projectsData.personalProjects} 
@@ -67,8 +67,8 @@ const MyProjects = () => {
             title="Collaborative Projects" 
             icon="rocket" 
           />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </section>
   );
 };

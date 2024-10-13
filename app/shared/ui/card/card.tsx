@@ -1,4 +1,4 @@
-import { Card, Text } from "@mantine/core";
+import { Box, Card, Text } from "@mantine/core";
 import { motion } from "framer-motion";
 import React from "react";
 
@@ -31,16 +31,16 @@ const SharedCard: React.FC<SharedCardProps> = ({
         radius="md"
         className="border border-gray-400 hover:shadow-xl transition-shadow"
       >
-        <div className="flex items-center justify-between dark:text-white text-gray-900 p-4 rounded-t-md">
+        <Box className="flex items-center justify-between dark:text-white text-gray-900 p-4 rounded-t-md">
           <span className="flex items-center space-x-2">
             {IconComponent && <IconComponent size={24} />}
             <Text className="font-semibold">{title}</Text>
           </span>
           <Text className="text-gray-600 dark:text-gray-400">{subtitle}</Text>
-        </div>
-        <div className="p-4">
+        </Box>
+        <Box className="p-4">
           <Text className="font-semibold mb-2">{description}</Text>
-        </div>
+        </Box>
       </Card>
     </motion.div>
   );
