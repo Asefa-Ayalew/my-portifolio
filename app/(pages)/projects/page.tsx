@@ -1,55 +1,76 @@
+// src/components/MyProjects.tsx
 "use client";
-import React from "react";
 import { motion } from "framer-motion";
-// import CustomCard from "@/app/shared/ui/card/card";
+import { Title, Text } from "@mantine/core";
+import ProjectsList from "@/app/components/projects/projects-list";
 
-const Skills = () => {
-  const onCardClicked = () =>{
-    console.log('card clicked');
-    
-  }
+const projectsData = {
+  personalProjects: [
+    {
+      title: "Personal Portfolio",
+      description:
+        "Designed and built my personal portfolio to showcase my skills and projects using React, Mantine, and Framer Motion.",
+      year: "2024",
+      technologies: "React, Mantine, Framer Motion, Tailwind CSS",
+    },
+    {
+      title: "E-commerce Website",
+      description:
+        "Contributed to the development of a responsive e-commerce website focusing on user experience and performance optimization.",
+      year: "2024",
+      technologies: "Nextjs, Redux, Mantine, Typescript and tailwindcss",
+    },
+  ],
+  collaborativeProjects: [
+    {
+      title: "Egp",
+      description:
+        "Around the world, governments have been traditionally embracing ICT to improve the efficiency and effectiveness with which they deliver services to their citizens and provide timely and accurate access to information. These initiatives span the entire spectrum of government responsibilities and are generically termed eGovernment initiatives (or e-Governance). One of the most successful applications of ICT is in the area of public procurement, known as Electronic Government Procurement (e-GP).",
+      year: "2022 - present",
+      technologies: "Angular, Ngxs, ng-zorro-antd, Typescript, and tailwindcss",
+    },
+    {
+      title: "E-Service",
+      description:
+        "The Ethiopian Government Electronic Services Portal has been developed to provide electronic public services to citizens, non-citizens, businesses, and governmental & non-governmental organizations.",
+      year: "2021-2022",
+      technologies: "React, Redux, Mantine, typescript and tailwindcss",
+    },
+  ],
+};
+
+const MyProjects = () => {
   return (
-    <>
-      <section className="md:flex md:justify-between w-full min-h-screen dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16 mx-4">
-        <div className="md:w-1/2">
-          <motion.img
-            src="./images/projects1.jpg"
-            alt="Developer at work"
-            className="md:mt-10"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 2 }}
-            width={600}
-            height={400}
+    <section id="my-projects" className="py-20 bg-gray-900 text-white md:mx-16">
+      <div className="max-w-full px-4">
+        <div className="text-center md:text-left mb-10">
+          <Title className="text-3xl font-bold text-green-600 mb-2">
+            My Projects
+          </Title>
+          <Text className="text-lg text-gray-400">
+            A selection of personal and collaborative projects that highlight my
+            skills and contributions.
+          </Text>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Personal Projects Section */}
+          <ProjectsList 
+            projects={projectsData.personalProjects} 
+            title="Personal Projects" 
+            icon="code" 
+          />
+
+          {/* Collaborative Projects Section */}
+          <ProjectsList 
+            projects={projectsData.collaborativeProjects} 
+            title="Collaborative Projects" 
+            icon="rocket" 
           />
         </div>
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="md:w-1/2 mt-16"
-        >
-          <h1 className="text-3xl">Projects</h1>
-          <p className="mt-3 md:mr-32 text-justify">
-            My projects leverage a wide range of cutting-edge technologies, with
-            a strong focus on web-based applications. I specialize in creating
-            dynamic, high-performance solutions that prioritize both
-            functionality and user experience. Below are some of the key
-            projects I have worked on. Please note that not all of them are
-            currently available on GitHub.
-          </p>
-        </motion.div>
-      </section>
-      <div>
-        {/* <CustomCard 
-        buttonText="fk"
-        description="card description"
-        onClick={onCardClicked}
-        title="card title"
-        /> */}
       </div>
-    </>
+    </section>
   );
 };
 
-export default Skills;
+export default MyProjects;
