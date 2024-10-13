@@ -41,7 +41,7 @@ const projectsData = {
 
 const MyProjects = () => {
   return (
-    <section id="my-projects" className="py-20 bg-gray-900 text-white md:mx-16">
+    <section id="my-projects" className="py-20 dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16">
       <div className="max-w-full px-4">
         <div className="text-center md:text-left mb-10">
           <Title className="text-3xl font-bold text-green-600 mb-2">
