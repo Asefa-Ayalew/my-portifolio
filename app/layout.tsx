@@ -3,6 +3,7 @@ import "./globals.css";
 import { MantineProvider } from "@mantine/core";
 import { theme as baseTheme } from "./theme";
 import Shell from "./layout/shell/shell";
+import ProgressBar from "./shared/ui/progress-bar";
 
 export const metadata: Metadata = {
   title: "My-portifolio",
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <MantineProvider theme={baseTheme}>
           <Shell>
+            <ProgressBar />
             <main>{children} </main>
           </Shell>
         </MantineProvider>
