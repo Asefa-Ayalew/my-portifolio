@@ -38,8 +38,8 @@ const Home = () => {
             intuitive user interfaces that not only engage users but also
             elevate brands. My goal is to transform complex ideas into seamless,
             user-friendly applications that foster interaction and drive
-            business success. Let&apos;s work together to turn your vision into a
-            reality!
+            business success. Let&apos;s work together to turn your vision into
+            a reality!
           </Text>
 
           <Box className="space-x-4">
@@ -47,8 +47,10 @@ const Home = () => {
               Hire Me
             </Button>
             <Button
+              component="a"
+              href="/contacts"
               variant="outline"
-              className="border-green-text-green-600 text-green-600 hover:bg-green-text-green-600 hover:text-white"
+              className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white"
             >
               Let&apos;s Talk
             </Button>
