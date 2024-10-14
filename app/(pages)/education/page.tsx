@@ -7,7 +7,7 @@ import EducationTimeline from "@/app/components/edu-timeline";
 
 const Education = () => {
   return (
-    <section className="flex flex-col items-center text-justify">
+    <section className="flex flex-col items-center text-justify min-h-screen">
       <Title
         order={2}
         className="text-2xl font-bold text-green-600 md:ml-32 mb-4 items-center"
