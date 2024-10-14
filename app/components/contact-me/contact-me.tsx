@@ -14,70 +14,82 @@ import {
   IconBrandYoutube,
   IconBrandInstagram,
 } from "@tabler/icons-react";
-import { ContactIconsList } from "./contact-icons";
+import { ContactIconsList } from "./contact-icons-list";
 
-const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
+const socialIcons = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
 
 export function ContactMeSection() {
-  const icons = social.map((Icon, index) => (
-    <ActionIcon
-      key={index}
-      size={28}
-      variant="transparent"
-      className="hover:bg-gray-200 dark:hover:bg-gray-700"
-    >
-      <Icon
-        size="1.4rem"
-        stroke={1.5}
-        className="text-gray-900 dark:text-white"
-      />
-    </ActionIcon>
-  ));
+  const renderSocialIcons = () =>
+    socialIcons.map((Icon, index) => (
+      <ActionIcon
+        key={index}
+        size={28}
+        variant="transparent"
+        className="hover:bg-gray-200 dark:hover:bg-gray-700"
+      >
+        <Icon
+          size="1.4rem"
+          stroke={1.5}
+          className="text-gray-900 dark:text-white"
+        />
+      </ActionIcon>
+    ));
 
   return (
-    <Box className="w-full md:mx-16 mx-4 bg-white dark:bg-gray-900 py-12 px-6">
-      <Box>
-        <SimpleGrid cols={{ base: 1, sm: 2 }} spacing={50}>
-          <Box>
-            <Title className="text-gray-900 dark:text-white">Contact Us</Title>
-            <Text className="text-gray-900 dark:text-white mt-4 mb-8">
-              Leave your email and we will get back to you within 24 hours.
-            </Text>
+    <Box className="md:mx-16 mx-4 bg-white dark:bg-gray-900 py-12 px-6">
+      <SimpleGrid 
+        cols={{ base: 1, md: 2 }} 
+        spacing={50} 
+        className="w-full"
+      >
+        <Box>
+          <Title className="text-gray-900 dark:text-white">Contact Us</Title>
+          <Text className="text-gray-900 dark:text-white mt-4 mb-8">
+            Leave your email and we will get back to you within 24 hours.
+          </Text>
 
-            <ContactIconsList />
+          <ContactIconsList />
 
-            <Group mt="xl">{icons}</Group>
-          </Box>
-          <Box className="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-md">
-            <TextInput
-              label="Email"
-              placeholder="asefa12a19@gmail.com.com"
-              required
-              className="text-gray-900 dark:text-white"
-            />
-            <TextInput
-              label="Name"
-              placeholder="Asefa Ayalew"
-              mt="md"
-              className="text-gray-900 dark:text-white"
-            />
-            <Textarea
-              required
-              label="Your message"
-              placeholder="enter your message here"
-              minRows={4}
-              mt="md"
-              className="text-gray-900 dark:text-white"
-            />
-
-            <Group justify="flex-end" mt="md">
-              <Button className="bg-green-600 hover:bg-green-500 text-white">
-                Send message
-              </Button>
-            </Group>
-          </Box>
-        </SimpleGrid>
-      </Box>
+          <Group mt="xl" className="flex">{renderSocialIcons()}</Group>
+        </Box>
+        
+        <Box className="bg-white p-8 rounded-md shadow-xl">
+          <TextInput
+            label="Email"
+            placeholder="your@email.com"
+            required
+            classNames={{
+              input: "bg-white border-gray-200 text-black placeholder-gray-500",
+              label: "text-black",
+            }}
+          />
+          <TextInput
+            label="Name"
+            placeholder="your name"
+            mt="md"
+            classNames={{
+              input: "bg-white border-gray-200 text-black placeholder-gray-500",
+              label: "text-black",
+            }}
+          />
+          <Textarea
+            required
+            label="Your message"
+            placeholder="Enter your message"
+            minRows={4}
+            mt="md"
+            classNames={{
+              input: "bg-white border-gray-200 text-black placeholder-gray-500",
+              label: "text-black",
+            }}
+          />
+          <Group className="flex justify-end mt-4">
+            <Button className="bg-green-600 hover:bg-green-500 text-white">
+              Send message
+            </Button>
+          </Group>
+        </Box>
+      </SimpleGrid>
     </Box>
   );
 }

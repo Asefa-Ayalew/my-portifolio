@@ -45,7 +45,7 @@ const skillsData = [
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="py-20 dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16">
+    <section id="skills" className="py-11 dark:bg-gray-900 bg-white dark:text-white text-gray-900 md:mx-16 pb-28 min-h-screen">
       <Box className="max-w-full px-4">
         <Box className="text-center md:text-left mb-10">
           <Title className="text-3xl font-bold text-green-600 mb-2">Skills</Title>
@@ -79,7 +79,10 @@ const SkillsSection = () => {
                   p="lg"
                   className="dark:bg-gradient-to-r from-gray-800 to-gray-700 bg-white dark:hover:bg-gray-600 transition-transform transform hover:scale-105 hover:shadow-xl mb-4"
                 >
-                  <Text className="dark:text-white text-gray-900 font-semibold">{skill.name}</Text>
+                  <div className="flex justify-between items-center">
+                    <Text className="dark:text-white text-gray-900 font-semibold">{skill.name}</Text>
+                    <Text className="dark:text-white text-gray-900 font-semibold">{skill.proficiency}%</Text>
+                  </div>
                   <Progress value={skill.proficiency} color="green" size="lg" className="mt-2" />
                 </Card>
               ))}
