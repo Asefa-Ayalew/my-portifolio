@@ -53,14 +53,14 @@ export function ContactMeSection() {
           <Group mt="xl" className="flex">{renderSocialIcons()}</Group>
         </Box>
         
-        <Box className="bg-white p-8 rounded-md shadow-xl">
+        <Box className="bg-white dark:bg-gray-900 p-8 rounded-md shadow-xl border border-gray-200">
           <TextInput
             label="Email"
             placeholder="your@email.com"
             required
             classNames={{
-              input: "bg-white border-gray-200 text-black placeholder-gray-500",
-              label: "text-black",
+              input: "bg-white dark:bg-gray-900 border-gray-200 text-black placeholder-gray-500 dark:placeholder-white",
+              label: "dark:text-white text-black",
             }}
           />
           <TextInput
@@ -68,8 +68,8 @@ export function ContactMeSection() {
             placeholder="your name"
             mt="md"
             classNames={{
-              input: "bg-white border-gray-200 text-black placeholder-gray-500",
-              label: "text-black",
+              input: "bg-white dark:bg-gray-900 border-gray-200 text-black placeholder-gray-500 dark:placeholder-white",
+              label: "dark:text-white text-black",
             }}
           />
           <Textarea
@@ -79,8 +79,8 @@ export function ContactMeSection() {
             minRows={4}
             mt="md"
             classNames={{
-              input: "bg-white border-gray-200 text-black placeholder-gray-500",
-              label: "text-black",
+              input: "bg-white dark:bg-gray-900 border-gray-200 text-black placeholder-gray-500 dark:placeholder-white",
+              label: "dark:text-white text-black",
             }}
           />
           <Group className="flex justify-end mt-4">
