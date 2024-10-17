@@ -31,7 +31,7 @@ const ProjectCard = ({ item }: ProjectCardProps) => {
     <Card
       shadow="xs"
       p="lg"
-      radius={"xl"}
+      radius={"lg"}
       className={`mb-4 dark:bg-gradient-to-r from-gray-800 to-gray-700 bg-gray-200 transition-transform duration-300 ease-in-out dark:hover:bg-gray-600 hover:scale-105 flex-1`}      
     >
       <Title order={4} className="text-lg font-semibold text-text-gray-900 dark:text-white text-left">
