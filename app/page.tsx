@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { Box, Button, Container, Text } from "@mantine/core";
 import TypingEffect from "./shared/ui/typeing-effect";
 import MySocialMedias from "./components/contact-me/my-social-medias";
+import Lottie from "lottie-react";
+import animatedImage from "../public/jsons/developer.json";
 
 const Home = () => {
   return (
@@ -60,14 +62,14 @@ const Home = () => {
       </Container>
       <Container className="md:w-1/2">
         {/* Image Animation (Optional) */}
-        <motion.img
-          src="./images/profile1.jpg" // Replace with your image
-          alt="Developer at work"
-          className="mt-10 w-full"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 2 }}
-        />
+        <motion.div
+      className="flex justify-center items-center h-screen w-full -mt-24"
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 2 }}
+    >
+      <Lottie animationData={animatedImage} loop={true} />
+    </motion.div>
       </Container>
     </section>
   );
