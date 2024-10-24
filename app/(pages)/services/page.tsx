@@ -62,7 +62,7 @@ const ServicesSection = () => {
                   className="dark:bg-gradient-to-r from-gray-800 to-gray-700 bg-white dark:hover:bg-gray-600 transition-transform transform hover:scale-105 hover:shadow-xl mb-4"
                 >
                   <Group className="mb-4 justify-center">
-                    <ThemeIcon size={48} radius="xl" color="green-600">
+                    <ThemeIcon size={48} radius="xl" color="green-600" className="dark:text-white text-green-400">
                       {service.icon}
                     </ThemeIcon>
                     <Title order={3} className="text-xl text-green-300">
